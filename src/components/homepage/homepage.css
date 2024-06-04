@@ -1,0 +1,13 @@
+.home-page-div{
+    margin-top: 20px;
+   height: 200px;
+   width: 170px;
+   background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+.home-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
