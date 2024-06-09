@@ -10,14 +10,17 @@ import {searchMovie} from '../apis/omdb'
 function Home() {
   const[MovieList,setMovieList]=useState([]);
 
-  async function downloadDefaultMovie(movieName){
-    const response=await axios.get(searchMovie(movieName));
-    console.log(response.data);
-    setMovieList(response.data.Search);
+  async function downloadDefaultMovie(...args){
+    const urls=args.map((name)=> searchMovie(name));
+    console.log(urls);
+    const response=await axios.all(urls.map(url=>axios.get(url)));
+    console.log(response);
+    const movies=response.map((movieResponse)=>movieResponse.data.Search)
+    setMovieList([].concat(...movies));
   }
 
   useEffect(()=>{
-    downloadDefaultMovie('harry');
+    downloadDefaultMovie('harry','avengers','batman');
   },[])
   
 
