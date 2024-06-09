@@ -10,12 +10,17 @@ function Navbar() {
 
   return (
     <div className="nav-div">
-      <LiveTvIcon style={{fontSize:'60px'}} variant="large"/>
+      <div className="live-tv">
+      <LiveTvIcon style={{fontSize:'40px',color:"white"}} variant="large"/>
+       Movies
+      </div>
       <div className="navbar">
         <input type="text" className="input-field" placeholder="search...." />
         <button className="search-btn">Search</button>
       </div>
-    <ModeNightIcon style={{fontSize:'50px'}} className="navbar-icon"/> 
+      <div className="night-mode">
+      <ModeNightIcon style={{fontSize:'50px',color:"white"}} className="navbar-icon"/> 
+      </div>
     </div>
   );
 }

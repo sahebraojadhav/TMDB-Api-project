@@ -1,0 +1,45 @@
+.movie-card{
+    font-family: "Source Sans Pro Semibol";
+    font-weight: 400;
+    max-height: 500px;
+    max-width: 300px;
+    margin-top: 20px;
+    background-color:#F4F4F4 ;
+    height: 350px;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+    overflow: hidden;
+}
+
+
+.movie-image img{
+    height: 225px;
+    width: 150px;
+    border-radius: 10px;
+   
+}
+
+.movie-title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    line-height: 17px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.movie-year{
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.movie-type{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
