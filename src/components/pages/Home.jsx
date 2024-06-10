@@ -7,22 +7,11 @@ import { Movie } from "@mui/icons-material";
 import StarIcon from '@mui/icons-material/Star';
 
 import { searchMovie } from "../apis/omdb";
+import useMovieList from "../hooks/useMovieList";
 
 function Home() {
-  const [MovieList, setMovieList] = useState([]);
 
-  async function downloadDefaultMovie(...args) {
-    const urls = args.map((name) => searchMovie(name));
-    console.log(urls);
-    const response = await axios.all(urls.map((url) => axios.get(url)));
-    console.log(response);
-    const movies = response.map((movieResponse) => movieResponse.data.Search);
-    setMovieList([].concat(...movies));
-  }
-
-  useEffect(() => {
-    downloadDefaultMovie("harry", "avengers", "batman");
-  }, []);
+  const [MovieList]=useMovieList('harry','avengers','batman');
 
   return (
     <div className="main-home-div">
@@ -41,10 +30,7 @@ function Home() {
           />
         ))}
       </div>
-      <div className="rating-card">
-        <h4>Give us rating</h4>
-        <StarIcon/>
-      </div>
+      
     </div>
   );
 }
