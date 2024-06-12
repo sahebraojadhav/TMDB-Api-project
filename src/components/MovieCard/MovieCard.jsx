@@ -1,7 +1,9 @@
 import React from 'react'
 import './moviecard.css'
+import Navbar from '../navbar/Navbar'
 function MovieCard({Title,Year,Type,Poster}) {
   return (
+    <>
     <div className='movie-card'>
        <div className="movie-image">
         <img src={Poster} alt="Image" />
@@ -16,6 +18,7 @@ function MovieCard({Title,Year,Type,Poster}) {
         <span>Type:{Type}</span>
        </div>
     </div>
+    </>
   )
 }
 

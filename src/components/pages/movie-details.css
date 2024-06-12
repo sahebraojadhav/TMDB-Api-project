@@ -1,0 +1,9 @@
+.movie-detils{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    background-color: #2E3A59;
+    padding-bottom: 10%;
+}

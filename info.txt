@@ -1,0 +1,2 @@
+createing movie details components
+timestamp: 12:21

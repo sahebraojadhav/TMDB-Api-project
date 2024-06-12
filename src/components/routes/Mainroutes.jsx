@@ -10,7 +10,7 @@ function Mainroutes() {
     <Routes>
       {/*Routes contain multiple route*/}
       <Route path='/' element={<Home/>}/>
-      <Route path='/moive/:name' element={<MovieDetails/>}/>
+      <Route path='/movie/:id' element={<MovieDetails/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>
   )

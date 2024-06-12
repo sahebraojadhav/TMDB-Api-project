@@ -2,33 +2,38 @@ import React, { useRef, useState } from "react";
 import AbcIcon from "@mui/icons-material/Abc";
 import ModeNightIcon from "@mui/icons-material/ModeNight";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
-
 import "./navbar.css";
 import useMovieList from "../hooks/useMovieList";
 import { Movie } from "@mui/icons-material";
 import useDebounce from "../hooks/useDebounce";
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const resultListRef = useRef(null);
   const [isAutoCompleteVisible, setIsAutoCompleteVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [movieList] = useMovieList(searchTerm);
+  const navigator=useNavigate();
 
   console.log("movieList", movieList);
 
-  function handleAutoCompleteClick(e,value){
+  function handleAutoCompleteClick(e,movieImdbId){
     console.log("we are on 19")
-    console.log(e.target,value);
+    console.log(e.target,movieImdbId);
+    navigator(`/movie/${movieImdbId}`);
   }
 
   return (
     <div className="nav-div">
       <div className="live-tv">
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <LiveTvIcon
           style={{ fontSize: "40px", color: "white" }}
           variant="large"
         />
         Movies
+        </Link>
       </div>
       <div className="navbar">
         <input

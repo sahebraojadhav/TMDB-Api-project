@@ -86,4 +86,9 @@
     margin-bottom: 1rem;
     padding: 1rem;
     border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.autocomplete-result:hover{
+    background-color: gainsboro;
 }
