@@ -27,6 +27,7 @@ function Home() {
             Year={movie.Year}
             Type={movie.Type}
             Poster={movie.Poster}
+            id={movie.imdbID}
           />
         ))}
       </div>

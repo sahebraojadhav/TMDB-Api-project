@@ -8,7 +8,7 @@ function useMovieList(...args){
 
     async function downloadDefaultMovie(...args) {
     try{
-      const urls = args.map((name) => searchMovie(name));
+    const urls = args.map((name) => searchMovie(name));
     const response = await axios.all(urls.map((url) => axios.get(url)));
     if(response[0].data.Error){
       setMovieList([]);

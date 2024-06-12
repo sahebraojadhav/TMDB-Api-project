@@ -1,9 +1,23 @@
-.movie-detils{
+.main-div{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
     background-color: #2E3A59;
-    padding-bottom: 10%;
+    padding-bottom: 100%;
+}
+
+.movie-details-second-part{
+    padding: 2rem;
+    font-family: roboto;
+    color: white;
+}
+
+.movie-detils{
+    padding-left: 2rem;
+}
+
+.movie-info{
+    padding: 1rem;
 }

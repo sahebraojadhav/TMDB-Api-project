@@ -4,4 +4,28 @@
     padding: 0;
     
     box-sizing: border-box;
-    }
+
+}
+
+:root{
+   /*
+    --prime-blue:#00a0d6;
+    --dull-blue:#364f65;
+    --dark-blue:#191e26;
+    --light-prime-gray:#32363e;
+    --card-background:whitesmoke;
+    --font-color:black;
+   */
+
+   --prime-blue:#00a0d6;
+   --dull-blue:#364f65;
+   --dark-blue:#ffffff;
+   --light-prime-gray:#32373a;
+   --card-background:#00a0d6;
+    --white-shade:#f1f1f1;
+    --font-color:white;
+}
+
+body{
+    background-color: var(--dark-blue);
+}

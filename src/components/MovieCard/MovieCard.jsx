@@ -1,10 +1,18 @@
 import React from 'react'
 import './moviecard.css'
 import Navbar from '../navbar/Navbar'
-function MovieCard({Title,Year,Type,Poster}) {
+import { useNavigate } from 'react-router-dom'
+
+function MovieCard({Title,Year,Type,Poster,id}) {
+
+  const navigator=useNavigate();
+
+  function handleClick(){
+    navigator(`./movie/${id}`)
+  }
+
   return (
-    <>
-    <div className='movie-card'>
+    <div onClick={handleClick} className='movie-card'>
        <div className="movie-image">
         <img src={Poster} alt="Image" />
        </div>
@@ -18,7 +26,7 @@ function MovieCard({Title,Year,Type,Poster}) {
         <span>Type:{Type}</span>
        </div>
     </div>
-    </>
+    
   )
 }
 
