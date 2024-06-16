@@ -1,2 +1,5 @@
-createing movie details components
-timestamp: 12:21
+1.remaining features 
+2.implementing search button
+3.darkmode and light mode 
+and saving data into brower storage
+4.fixing the bug of onclick on result
